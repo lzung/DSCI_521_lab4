@@ -1,0 +1,54 @@
+---
+title: "DSCI 521 Lab 4 Presentation"
+author: "Lauren Zung"
+date: "September 27th, 2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: center, middle
+
+# Start of my Presentation
+
+### This is an opening slide
+
+---
+# Slide Header
+
+This slide has a code block that demonstrates how to square an integer x. The output is shown in raw text.
+
+```{r, results='asis'}
+x <- 15
+x ** 2
+```
+
+--
+
+You can also add additional text to the same slide with two dashes. What is today's date?
+
+```{r, echo=FALSE}
+Sys.Date()
+```
+
+---
+
+# Math Slide
+
+You can also render LaTeX expressions in your presentation.
+
+$$P(X) = \int_0^\infty xf_X(x)dx$$
+--
+
+And plot graphs!
+
+```{r, out.width = '220px', fig.align='center'}
+x <- seq(-5, 5, length=100)
+y <- dnorm(x)
+
+plot(x, y, type = "l", lwd = 2, xlab = "x", ylab = "y")
+```
+--
